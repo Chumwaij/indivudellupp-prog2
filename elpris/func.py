@@ -16,7 +16,7 @@ def get_prices(year, month, day, price_class):
     prices = []
     for item in data:
         time = item.get("time_start", "")[11:16]  # hh:mm-format
-        price = round(item.get("Kr_per_kWh", 0), 3)
+        price = round(item.get("SEK_per_kWh", 0), 3)
         prices.append((time, price))
 
     return prices
