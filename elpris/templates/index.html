@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Elpris-sökning</title>
+</head>
+<body>
+    <h1>Sök elpriser</h1>
+    <form action="/result" method="POST">
+        <label>År:</label>
+        <input type="number" name="year" required><br>
+
+        <label>Månad:</label>
+        <input type="number" name="month" required><br>
+
+        <label>Dag:</label>
+        <input type="number" name="day" required><br>
+
+        <label>Prisklass:</label>
+        <select name="price_class" required>
+            <option value="SE1">SE1 (Luleå)</option>
+            <option value="SE2">SE2 (Sundsvall)</option>
+            <option value="SE3">SE3 (Stockholm)</option>
+            <option value="SE4">SE4 (Malmö)</option>
+        </select><br><br>
+
+        <button type="submit">Sök</button>
+    </form>
+</body>
+</html>
