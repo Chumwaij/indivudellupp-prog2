@@ -5,7 +5,9 @@
     <title>Elpris-sökning</title>
 </head>
 <body>
+     <!-- sidans huvudrubrik -->
     <h1>Sök elpriser</h1>
+    <!-- formulär skickar data till /result -->
     <form action="/result" method="POST">
         <label>År:</label>
         <input type="number" name="year" required><br>
@@ -23,6 +25,7 @@
             <option value="SE3">SE3 (Stockholm)</option>
             <option value="SE4">SE4 (Malmö)</option>
         </select><br><br>
+        <!-- skicka formuläret -->
 
         <button type="submit">Sök</button>
     </form>
