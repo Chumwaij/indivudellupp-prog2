@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultat</title>
+</head>
+<body>
+    {% if error %}
+        <h2 style="color:red;">{{ error }}</h2>
+    {% else %}
+        <h2>Elpriser för {{ date }}</h2>
+        <table border="1" cellpadding="5">
+            <tr><th>Tid</th><th>Pris (SEK/kWh)</th></tr>
+            {% for time, price in prices %}
+                <tr><td>{{ time }}</td><td>{{ price }}</td></tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+    <br>
+    <a href="/">Tillbaka</a>
+</body>
+</html>
