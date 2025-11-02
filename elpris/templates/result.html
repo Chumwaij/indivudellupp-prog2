@@ -5,11 +5,14 @@
     <title>Resultat</title>
 </head>
 <body>
+    <!-- tar fram felmeddelande om något gick fel -->
     {% if error %}
         <h2 style="color:red;">{{ error }}</h2>
     {% else %}
+        <!-- tar fram elpriser för datumet som är valt -->
         <h2>Elpriser för {{ date }}</h2>
         <table border="1" cellpadding="5">
+            <!-- Loopar igenom tiderna och priserna -->
             <tr><th>Tid</th><th>Pris (SEK/kWh)</th></tr>
             {% for time, price in prices %}
                 <tr><td>{{ time }}</td><td>{{ price }}</td></tr>
